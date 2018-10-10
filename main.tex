@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{maratona_template}
+\thispagestyle{empty}
+
+\newtheorem{propriedade}{Propriedade}
+\newtheorem{definicao}{Definição}
+
+\begin{document}
+
+\begin{center}
+\Large{INSTITUTO FEDERAL DO SUL DE MINAS GERIAS}\\
+\large{Campus Poços de Caldas}\\
+\vspace{10cm}
+\Large{Notebook para as Maratonas de Programação}\\
+\large{Equipe SK Teletom}
+\end{center}
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\section{Template}
+\inserircodigo{c++}{template.cpp}{8}{8}{}
+
+\newpage
+\section{Matemática}
+\subsection{Divisão de números inteiros com resto negativo}
+
+Caso seja necessário dividir números inteiros com resto um resto que possivelmente negativo
+
+\subsection{Extrair o bit menos significativo}
+
+\inserircodigo{c++}{matematica/div_numeros_inteiros_resto_negativo.cpp}{8}{8}{}
+
+\subsection{Condição existência e classificação de triângulo}
+
+Para um triângulo existir, as três condições devem ser satisfeitas.
+
+\inserircodigo{c++}{matematica/condicao_existencia_triangulo.cpp}{8}{8}{}
+
+\subsection{Comparação entre 2 valores tipo Double}
+
+A comparação entre dois doubles pode retornar valores indejados. Por isso uma função especial para comparação pode ser necessária.
+
+\inserircodigo{c++}{matematica/comparacao_double.cpp}{8}{8}{}
+
+\end{document}
