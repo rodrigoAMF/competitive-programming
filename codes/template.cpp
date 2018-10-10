@@ -10,6 +10,8 @@ typedef long double ld;
 #define s second
 #define pb push_back
 #define mp make_pair
+#define min(a,b) ((a<b)?a:b)
+#define max(a,b) ((a<b)?b:a)
 #define l length()
 #define forn(i, n) for ( int i = 0; i < (n); ++i )
 #define fornx(i, x, n) for ( int i = (x); i < (n); ++i )

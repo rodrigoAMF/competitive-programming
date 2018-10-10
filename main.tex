@@ -163,27 +163,23 @@ Para saber quantos quadrados diferentes existem em um quadriculado de N x N quad
 
 \subsection{Número de permutações de um conjunto}
 
-// dados um grupo de 4 pessoas, de quantas formas podemos colocá-los em fila? \newline
-\(P(n, k) = n!/(n-k)!\) \newline
-// k = número de elementos para permuta; n = número total de elementos
+\inserircodigo{c++}{matematica/num_permutacoes_conj.cpp}{8}{8}{}
 
 \subsection{Número de combinações de um conjunto}
 
-\(x = n!/(n-k)!k!\)
+\inserircodigo{c++}{matematica/num_combi_conj.cpp}{8}{8}{}
 
 \subsection{Tricks do cmath}
 
-// Quando um número for muito grande usar powl ao invés de pow. powl terá mais precisão\newline
-\(powl(a, b)
-(int)round(p, (1.0/n))\)\newline\( // nth raíz de p\)
+\inserircodigo{c++}{matematica/tricks_cmath.cpp}{8}{8}{}
 
 \subsection{Máximo entre dois números}
 
-int max(int a, int b)\newline\{return a>b ? a:b; \}
+\inserircodigo{c++}{matematica/max_entre_dois_num.cpp}{8}{8}{}
 
 \subsection{Mínimo entre dois números}
 
-int min(int a, int b)\newline \{ return a<b ? a:b;\}
+\inserircodigo{c++}{matematica/min_entre_dois_num.cpp}{8}{8}{}
 
 \subsection{Números primos menores que 100}
 
@@ -193,31 +189,28 @@ int min(int a, int b)\newline \{ return a<b ? a:b;\}
 
 \subsection{Maior divisor comum – GCD}
 
-int gcd(int a, int b)\newline
-\{\newline
-    if (b==0) return a;\newline
-    else return gcd(b, a\%b);\newline
-\}\newline
+\inserircodigo{c++}{matematica/maior_dc.cpp}{8}{8}{}
 
 \subsection{Menor divisor comum – LCM}
 
-int lcm(int a, int b)\newline
-\{\newline
-return a*b/gcd(a,b);\newline
-\}
+\inserircodigo{c++}{matematica/menor_dc.cpp}{8}{8}{}
 
-\subsection{A b mod p}
+\subsection{$A^b$ mod p}
 
-int lcm(int a, int b)\newline
-\{\newline
-return a*b/gcd(a,b);\newline
-\}
+\inserircodigo{c++}{matematica/ab_mod_p.cpp}{8}{8}{}
 
+\subsection{n! mod p}
+
+\inserircodigo{c++}{matematica/n_mod_p.cpp}{8}{8}{}
+
+\subsection{Fatorização de primos}
+
+\inserircodigo{c++}{matematica/fatorizacao_primos.cpp}{8}{8}{}
 
 
 \newpage
 \section{Grafos}
-\subsection{Representação de um Grafo}
+\subsection{Representações de um Grafo}
 \subsubsection{Matriz de Adjacência}
 
 \indent\indent A matriz de adjacência consiste em saber, para cada possível par de vértices (u,v), se existe ou não a aresta (u,v).
@@ -234,6 +227,10 @@ return a*b/gcd(a,b);\newline
   \includegraphics[width=\linewidth/2]{figures/grafos/representacao_matriz_adj.png}
 \end{center}
 
+\indent Implementação em C++:
+
+\inserircodigo{c++}{grafos/matriz_adjacencia.cpp}{8}{8}{}
+
 \subsubsection{Lista de Adjacência}
 
 \indent\indent A lista de adjacência se baseia em guardar, para cada vértice, quais são os seus vizinhos, ou, de uma maneira geral, guardar as arestas que partem desse vértice.
@@ -245,5 +242,50 @@ return a*b/gcd(a,b);\newline
 \begin{center}
   \includegraphics[width=\linewidth/2]{figures/grafos/representacao_lista_adj.png}
 \end{center}
+
+\indent Implementação em C++:
+
+\inserircodigo{c++}{grafos/lista_adjacencia.cpp}{8}{8}{}
+
+\subsection{Algoritmos}
+\subsubsection{DFS(Busca em profundidade)}
+
+Como o próprio nome já sugere, o algoritmo começa em um nó raiz e explora tanto quanto possível cada um dos seus ramos, antes de retroceder.
+
+\inserircodigo{c++}{grafos/dfs.cpp}{8}{8}{}
+
+\subsubsection{BFS(Busca em largura)}
+
+\inserircodigo{c++}{grafos/bfs.cpp}{8}{8}{}
+
+\subsubsection{Dijkstra - Caminho Mínimo entre dois pontos}
+
+\inserircodigo{c++}{grafos/dijkstra.cpp}{8}{8}{}
+
+\section{Programação dinâmica}
+
+\indent Condições para aplicação da programação dinâmica:
+
+\begin{itemize}
+    \item É possível dividir o problema em problemas menores.
+    \item É possível encontrar as soluções ótimas para os subproblemas.
+    \item Há sobreposição de subproblemas, isto é, há subproblemas que compartilham as mesmas respostas ótimas.
+\end{itemize}
+
+\subsection{Problema da mochila}
+
+\indent O problema da mochila consiste de uma mochila de capacidade total $C$ e de $N$ itens que podem ser colocados dentro da mochila. Cada item possui um peso $p_i$ e um valor $v_i$. Objetiva-se colocar o maior número de itens dentro da mochila a fim de maximizar o valor total dos itens colocados. Matematicamente:
+
+\begin{equation}
+    \max \sum\limits_{i=1}^{I}v_i,
+\end{equation}
+
+\noindent onde $I$ é o conjunto de itens dentro da mochila. Sujeito as restrições:
+
+\begin{equation}
+    \sum\limits_{i=1}^{I}p_i \leq C
+\end{equation}
+
+
 
 \end{document}
