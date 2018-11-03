@@ -207,6 +207,101 @@ Para saber quantos quadrados diferentes existem em um quadriculado de N x N quad
 
 \inserircodigo{c++}{matematica/fatorizacao_primos.cpp}{8}{8}{}
 
+\newpage
+\section{Strings}
+
+\subsection{Modificações}
+
+\subsubsection{Dividir uma string de acordo com um token}
+
+\inserircodigo{c++}{strings/modificacoes/dividir_string_por_token.cpp}{8}{8}{}
+
+\subsubsection{Apagar um intervalo de uma string}
+
+\inserircodigo{c++}{strings/modificacoes/apagar_intervalo_string.cpp}{8}{8}{}
+
+\subsubsection{Remover um caracter de toda a string}
+
+\inserircodigo{c++}{strings/modificacoes/remover_caractere_toda_string.cpp}{8}{8}{}
+
+\subsubsection{Inverter String}
+
+\inserircodigo{c++}{strings/modificacoes/inverter_string.cpp}{8}{8}{}
+
+\subsubsection{Substring}
+
+\inserircodigo{c++}{strings/modificacoes/substring.cpp}{8}{8}{}
+
+\subsection{Verificações}
+
+\subsubsection{Verificar se uma string está vazia}
+
+\inserircodigo{c++}{strings/verificacoes/verifica_string_vazia.cpp}{8}{8}{}
+
+\subsubsection{Verificar se caracter está entre [A-z]}
+
+\inserircodigo{c++}{strings/verificacoes/verifica_caractere_intervalo_A_z.cpp}{8}{8}{}
+
+\subsection{Conversões}
+
+\subsubsection{String para int}
+
+\inserircodigo{c++}{strings/conversoes/string_para_int.cpp}{8}{8}{}
+
+\subsubsection{String para long long}
+
+\inserircodigo{c++}{strings/conversoes/string_para_long_long.cpp}{8}{8}{}
+
+\subsubsection{String para unsigned int}
+
+\inserircodigo{c++}{strings/conversoes/string_para_unsigned_int.cpp}{8}{8}{}
+
+\subsubsection{String para unsigned long long}
+
+\inserircodigo{c++}{strings/conversoes/string_para_unsigned_long_long.cpp}{8}{8}{}
+
+\subsubsection{Char para int}
+
+\inserircodigo{c++}{strings/conversoes/char_para_int.cpp}{8}{8}{}
+
+\subsubsection{Int para String}
+
+\inserircodigo{c++}{strings/conversoes/int_para_string.cpp}{8}{8}{}
+
+\subsubsection{Caracteres minúsculos}
+
+\inserircodigo{c++}{strings/conversoes/caractere_minusculo.cpp}{8}{8}{}
+
+\subsubsection{Caracteres maiúsculos}
+
+\inserircodigo{c++}{strings/conversoes/caractere_maiusculo.cpp}{8}{8}{}
+
+\subsection{Apagar um intervalo de uma string}
+\inserircodigo{c++}{strings/modificacoes/apagar_intervalo_string.cpp}{8}{8}{}
+
+\subsection{Remover um caracter de toda a string}
+\inserircodigo{c++}{strings/modificacoes/remover_caractere_toda_string.cpp}{8}{8}{}
+
+\subsection{Verificar se uma string está vazia}
+\inserircodigo{c++}{strings/verificacoes/verifica_string_vazia.cpp}{8}{8}{}
+
+\subsection{Inverter String}
+\inserircodigo{c++}{strings/modificacoes/inverter_string.cpp}{8}{8}{}
+
+\subsection{Criar uma nova string a partir de um intervalo de outra string}
+\inserircodigo{c++}{strings/modificacoes/substring.cpp}{8}{8}{}
+
+\subsection{Verificar se caracter está entre [A-z]}
+\inserircodigo{c++}{strings/verificacoes/verifica_caractere_intervalo_A_z.cpp}{8}{8}{}
+
+\subsection{Busca [A-z]}
+\inserircodigo{c++}{strings/busca.cpp}{8}{8}{}
+
+\subsection{Insert, Erase, Replace}
+\inserircodigo{c++}{strings/insert_erase_replace.cpp}{8}{8}{}
+
+\subsection{String Streams}
+\inserircodigo{c++}{strings/string_streams.cpp}{8}{8}{}
 
 \newpage
 \section{Grafos}
@@ -227,7 +322,7 @@ Para saber quantos quadrados diferentes existem em um quadriculado de N x N quad
   \includegraphics[width=\linewidth/2]{figures/grafos/representacao_matriz_adj.png}
 \end{center}
 
-\indent Implementação em C++:
+\noindent Implementação em C++:
 
 \inserircodigo{c++}{grafos/matriz_adjacencia.cpp}{8}{8}{}
 
@@ -243,9 +338,12 @@ Para saber quantos quadrados diferentes existem em um quadriculado de N x N quad
   \includegraphics[width=\linewidth/2]{figures/grafos/representacao_lista_adj.png}
 \end{center}
 
-\indent Implementação em C++:
+\noindent Implementação em C++:
 
 \inserircodigo{c++}{grafos/lista_adjacencia.cpp}{8}{8}{}
+
+\subsection{Lista de Arestas}
+
 
 \subsection{Algoritmos}
 \subsubsection{DFS(Busca em profundidade)}
@@ -260,11 +358,99 @@ Como o próprio nome já sugere, o algoritmo começa em um nó raiz e explora ta
 
 \subsubsection{Dijkstra - Caminho Mínimo entre dois pontos}
 
-\inserircodigo{c++}{grafos/dijkstra.cpp}{8}{8}{}
+\inserircodigo{c++}{grafos/dijkstra.cpp}{8}{8}{"Lista de Adjacência"}
+\inserircodigo{c++}{grafos/dijkstra_matriz.cpp}{8}{8}{"Matriz de Adjacência"}
+
+\subsubsection{Kruskal - Árvore Geradora Mínima}
+
+Conjunto de arestas com peso mínimo que ligam todo o grafo. \textbf{Para este algoritmo representar grafo utilizando lista de arestas.}
+
+\begin{center}
+  \includegraphics[width=\linewidth/2]{figures/grafos/agm.png}
+\end{center}
+
+\subsubsection{Prim - Árvore Geradora Mínima}
+
+Algoritmo parecido com Dijkstra para encontrar árvore geradora mínima.
+
+\noindent Implementação em C++:
+
+\subsubsection{Ordenação Topológica}
+
+\textit{"Malter Warinho está ensinando seu filho a se vestir. Para isso, está dando instruções simples sobre a ordem em que seu filho deve se vestir para não colocar a roupa em ordem contrária (como o Superman). As instruções são do seguinte formato: as meias devem ser colocadas antes do sapatos; as calças devem ser vestidas antes do cinto; a camisa deve ser vestida antes do casaco; e por aí vai. Em alguns casos, não interessa a ordem em que deve ser colocada a roupa. Por exemplo, o filho pode colocar as calças antes do chapéu e vice-versa. Dada a lista de instruções e o número de peças de roupas, ajude o filho de Malter a se vestir."}\newline
+
+\noindent Bem, para formalizar um pouco o problema, vamos montar um grafo direcionado onde:
+
+\begin{itemize}
+    \item cada vértice é uma peça de roupa.
+    \item cada aresta partindo de um vértice X para um vértice Y significa que X tem que vir antes de Y.
+\end{itemize}
+
+\noindent Assim, pode se notar uma relação de transição: se X tem que vir antes de Y e Y tem que vir antes de Z, X tem que vir antes de Z.
+
+\noindent Teremos então um grafo semelhante a este:
+
+\begin{center}
+  \includegraphics[width=\linewidth/2]{figures/grafos/OT.png}
+\end{center}
+
+\noindent Tendo uma noção do grafo, é fácil perceber alguns fatos simples:
+
+\begin{itemize}
+    \item se o grafo possui um ciclo, não há ordem em que se possa resolver o problema.
+    \item podemos executar um vértice (vestir uma roupa) se, e somente se, todos os vértices (roupas) que possuem algum caminho até ele já foram executados.
+\end{itemize}
+
+\noindent Com apenas isso, já se pode pensar em um algoritmo bem simples para resolver o problema:
+
+\begin{itemize}
+    \item Pegar um vértice de grau de entrada zero (nenhuma aresta chega a ele) e acrescentar o vértice a ordem de execução.
+    \item Remover todas as arestas que partem desse vértice e atualizar os graus dos vértices ligados a essas arestas.
+    \item Repetir o processo até não haver mais vértices de grau de entrada zero (ou acabarem todos os vértices).
+\end{itemize}
+
+\noindent Se, ao final do processo, ainda sobrarem vértices, há um ciclo e não há ordem para resolver o problema. Caso contrário, o problema está resolvido.
+
+\noindent Implementação em C++:
+
+\subsubsection{Floyd-Warshall - Menor Caminho}
+
+Menor distância de qualquer vértice para qualquer outro.
+
+\subsubsection{LCA - Menor Ancestral Comum}
+
+Ancestral comum mais próximo à dois vértices.
+
+\begin{center}
+  \includegraphics[width=\linewidth/2]{figures/grafos/LCA.png}
+\end{center}
+
+\subsubsection{Caminho Euleriano}
+
+Um Caminho Euleriano de um grafo é um trajeto que passa por todas as arestas do grafo sem repetição.
+
+\noindent\textbf{Existência:} Porém, antes de procurarmos um Caminho Euleriano para um grafo, precisamos saber se ele existe. Checar a existência de um Caminho Euleriano é, na verdade, bem fácil. Para um grafo ter um Caminho Euleriano, é suficiente e necessário satisfazer uma de duas condições:
+\begin{itemize}
+    \item Todos os vértices do grafo tem que ter grau par.
+    \item Todos os vértices (ignorando-se os de grau zero) tem grau par, exceto dois vértices que possuem grau ímpar. Nesse caso, os dois vértices de grau ímpar são o início e o fim do Caminho.
+\end{itemize}
+
+\noindent Implementação em C++:
+
+\subsubsection{Grafos bipartidos}
+Um grafo é dito bipartido quando seus vértices podem ser divididos em dois conjuntos disjuntos tais que cada aresta ligue apenas vértices de grupos diferente.
+
+\begin{center}
+  \includegraphics[width=\linewidth/2]{figures/grafos/grafos_bipartidos.png}
+\end{center}
+
+\noindent Implementação em C++:
+
+\newpage
 
 \section{Programação dinâmica}
 
-\indent Condições para aplicação da programação dinâmica:
+\indent Aplicar a programação dinâmica se:
 
 \begin{itemize}
     \item É possível dividir o problema em problemas menores.
@@ -285,7 +471,14 @@ Como o próprio nome já sugere, o algoritmo começa em um nó raiz e explora ta
 \begin{equation}
     \sum\limits_{i=1}^{I}p_i \leq C
 \end{equation}
+\inserircodigo{c}{programacao_dinamica/mochila.c}{8}{8}{}
 
+\subsection{Problema do troco}
 
+\subsection{Problema do corte de hastes}
+
+Dada uma haste de tamanho $n$ e o preço $p_i$ do corte de tamanho $i$. Qual é a melhor maneira de cortar a haste para maximizar o preço?
+
+\inserircodigo{c}{programacao_dinamica/corte_haste.c}{8}{8}{}
 
 \end{document}

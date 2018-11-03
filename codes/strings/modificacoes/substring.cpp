@@ -1,0 +1,1 @@
+string str1 = line.substr(0,meio);
