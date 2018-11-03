@@ -1,0 +1,1 @@
+stoll(string, 0, 10)

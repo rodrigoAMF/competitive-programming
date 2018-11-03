@@ -1,0 +1,1 @@
+reverse(str1.begin(), str1.end());
