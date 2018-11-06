@@ -304,6 +304,96 @@ Para saber quantos quadrados diferentes existem em um quadriculado de N x N quad
 \inserircodigo{c++}{strings/string_streams.cpp}{8}{8}{}
 
 \newpage
+\section{Estruturas}
+\subsection{Verificar se elemento existe em um vetor}
+\inserircodigo{c++}{estruturas/verifica_se_elemento_existe_vector.cpp}{8}{8}{}
+
+\subsection{Apagar elementos duplicados em um vetor}
+\inserircodigo{c++}{estruturas/apagar_elementos_duplicados_vector.cpp}{8}{8}{}
+
+\subsection{Ordenar vector forma crescente}
+\inserircodigo{c++}{estruturas/ordenar_vetor_crescente.cpp}{8}{8}{}
+
+\subsection{Ordenar vector forma crescente}
+\inserircodigo{c++}{estruturas/ordenar_vetor_decrescente.cpp}{8}{8}{}
+
+\subsection{Excluir primeiro elemento de um vetor}
+\inserircodigo{c++}{estruturas/apagar_primeiro_elemento_vector.cpp}{8}{8}{}
+
+\subsection{Excluir último elemento de um vetor}
+\inserircodigo{c++}{estruturas/apagar_ultimo_elemento_vector.cpp}{8}{8}{}
+
+\subsection{Alterar tamanho de um vector}
+\inserircodigo{c++}{estruturas/alterar_tamanho_vector.cpp}{8}{8}{}
+
+\subsection{Busca em um vetor}
+\inserircodigo{c++}{estruturas/busca_vector.cpp}{8}{8}{}
+
+\subsection{Busca em um vetor}
+\inserircodigo{c++}{estruturas/busca_vector.cpp}{8}{8}{}
+
+\subsection{Deque}
+\indent Deque array dinâmico que funciona como vector mas, tem os métodos push\_front() e pop\_front().
+
+\subsection{Definição de um pair}
+\inserircodigo{c++}{estruturas/definicao_pair.cpp}{8}{8}{}
+
+\subsection{Leitura de um pair}
+\inserircodigo{c++}{estruturas/leitura_pair.cpp}{8}{8}{}
+
+\subsection{Utilizando pair de pair}
+\inserircodigo{c++}{estruturas/utilizando_pair_de_pair.cpp}{8}{8}{}
+
+\subsection{Criando pair com dois valores}
+\inserircodigo{c++}{estruturas/criando_pair_com_dois_valores.cpp}{8}{8}{}
+
+\subsection{Fila}
+\inserircodigo{c++}{estruturas/fila.cpp}{8}{8}{}
+
+\subsection{Pilha}
+\inserircodigo{c++}{estruturas/pilha.cpp}{8}{8}{}
+
+\subsection{SET}
+\inserircodigo{c++}{estruturas/set.cpp}{8}{8}{}
+
+\subsection{Map}
+\inserircodigo{c++}{estruturas/map.cpp}{8}{8}{}
+
+\subsection{For em Map}
+\inserircodigo{c++}{estruturas/for_em_map.cpp}{8}{8}{}
+
+\subsection{Fila de prioridades}
+\inserircodigo{c++}{estruturas/fila_prioridades.cpp}{8}{8}{}
+
+\subsection{Árvore de Segmentos}
+\indent Encontra o valor mínimo em um interval em O(log n).
+acao[i] representa o preço da ação de índice i
+arvore[i] representa o valor contido no nó i da árvore.
+\newline Ou seja, arvore[i] contém o índice da ação mais barata
+no intervalo representado pelo nó i
+(no) representa o nó que estamos na função recursiva o nó que estamos representa o segmento [i, j]
+\newline A função coloca altera o valor da ação de índice (posicao) para (novo\_valor) e altera a árvore de acordo com o necessário
+\begin{center}
+  \includegraphics[width=\linewidth]{figures/estruturas/arvore_de_segmentos.png}
+\end{center}
+\inserircodigo{c++}{estruturas/arvore_segmentos.cpp}{8}{8}{}
+
+\subsection{Árvore de Indexação Binária (BIT)}
+\indent Dado um intervalo 1 a N. Permite adicionar valores aos elementos do intervalo e, efetuar o somatório de um intervalo intermediário entre 1 e N em O(log n).
+\inserircodigo{c++}{estruturas/arvore_indexacao_binaria.cpp}{8}{8}{}
+
+\subsection{Lazy Propagation}
+\indent Você tem caixas N de frutas, númeradas de 1 a N, e duas possíveis operações.
+\newline Operação 1: adicionar v frutas a cada uma das caixas de índice entre a e b(inclusive).
+\newline Operação 2: responder quantas frutas existem nas caixas de índice entre a e b(inclusive).
+\newline Com Lazy Propagation, uma adaptação que se faz na Árvore de Segmentos que permite fazer ambas as operações em O(log n) arvore[i] representa o valor contido no nó i da árvore.
+\newline Ou seja, se o nó i representa o intervalo [X, Y], arvore[i] representa a soma das caixas de X a Y lazy[i] representa a soma de todas as operações atrasadas que devemos fazer ao nó i (no) representa o nó que estamos na função recursiva o nó que estamos representa o segmento [i, j] vamos somar (valor) a cada um dos índices no intervalo [a, b].
+\inserircodigo{c++}{estruturas/lazy_propagation.cpp}{8}{8}{}
+
+\subsection{Sort em structs}
+\inserircodigo{c++}{estruturas/sort_em_structs.cpp}{8}{8}{}
+
+\newpage
 \section{Grafos}
 \subsection{Representações de um Grafo}
 \subsubsection{Matriz de Adjacência}
@@ -343,7 +433,7 @@ Para saber quantos quadrados diferentes existem em um quadriculado de N x N quad
 \inserircodigo{c++}{grafos/lista_adjacencia.cpp}{8}{8}{}
 
 \subsection{Lista de Arestas}
-
+\inserircodigo{c++}{grafos/lista_de_arestas.cpp}{8}{8}{}
 
 \subsection{Algoritmos}
 \subsubsection{DFS(Busca em profundidade)}
@@ -365,6 +455,8 @@ Como o próprio nome já sugere, o algoritmo começa em um nó raiz e explora ta
 
 Conjunto de arestas com peso mínimo que ligam todo o grafo. \textbf{Para este algoritmo representar grafo utilizando lista de arestas.}
 
+\inserircodigo{c++}{grafos/kruskal_agm.cpp}{8}{8}{}
+
 \begin{center}
   \includegraphics[width=\linewidth/2]{figures/grafos/agm.png}
 \end{center}
@@ -374,6 +466,7 @@ Conjunto de arestas com peso mínimo que ligam todo o grafo. \textbf{Para este a
 Algoritmo parecido com Dijkstra para encontrar árvore geradora mínima.
 
 \noindent Implementação em C++:
+\inserircodigo{c++}{grafos/prim_agm.cpp}{8}{8}{}
 
 \subsubsection{Ordenação Topológica}
 
@@ -412,10 +505,14 @@ Algoritmo parecido com Dijkstra para encontrar árvore geradora mínima.
 \noindent Se, ao final do processo, ainda sobrarem vértices, há um ciclo e não há ordem para resolver o problema. Caso contrário, o problema está resolvido.
 
 \noindent Implementação em C++:
+\inserircodigo{c++}{grafos/ordenacao_topologica.cpp}{8}{8}{}
+
 
 \subsubsection{Floyd-Warshall - Menor Caminho}
 
 Menor distância de qualquer vértice para qualquer outro.
+\inserircodigo{c++}{grafos/floyd_warshall.cpp}{8}{8}{}
+
 
 \subsubsection{LCA - Menor Ancestral Comum}
 
@@ -424,6 +521,8 @@ Ancestral comum mais próximo à dois vértices.
 \begin{center}
   \includegraphics[width=\linewidth/2]{figures/grafos/LCA.png}
 \end{center}
+
+\inserircodigo{c++}{grafos/lca.cpp}{8}{8}{}
 
 \subsubsection{Caminho Euleriano}
 
@@ -437,6 +536,8 @@ Um Caminho Euleriano de um grafo é um trajeto que passa por todas as arestas do
 
 \noindent Implementação em C++:
 
+\inserircodigo{c++}{grafos/caminho_euleniano.cpp}{8}{8}{}
+
 \subsubsection{Grafos bipartidos}
 Um grafo é dito bipartido quando seus vértices podem ser divididos em dois conjuntos disjuntos tais que cada aresta ligue apenas vértices de grupos diferente.
 
@@ -445,6 +546,7 @@ Um grafo é dito bipartido quando seus vértices podem ser divididos em dois con
 \end{center}
 
 \noindent Implementação em C++:
+\inserircodigo{c++}{grafos/grafo_bipartido.cpp}{8}{8}{}
 
 \newpage
 

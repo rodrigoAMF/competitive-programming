@@ -1,0 +1,1 @@
+sort(notas.begin(), notas.end());
