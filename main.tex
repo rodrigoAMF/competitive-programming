@@ -26,7 +26,12 @@
 \inserircodigo{c++}{template.cpp}{8}{8}{}
 
 \newpage
-\section{Matemática}
+\section{Matemática Computacional}
+
+\subsection{Geometria Básica}
+
+
+
 \subsection{Divisão de números inteiros com resto negativo}
 
 Caso seja necessário dividir números inteiros com resto um resto que possivelmente negativo
@@ -577,10 +582,49 @@ Um grafo é dito bipartido quando seus vértices podem ser divididos em dois con
 
 \subsection{Problema do troco}
 
-\subsection{Problema do corte de hastes}
+\subsubsection{Problema do corte de hastes}
 
 Dada uma haste de tamanho $n$ e o preço $p_i$ do corte de tamanho $i$. Qual é a melhor maneira de cortar a haste para maximizar o preço?
 
 \inserircodigo{c}{programacao_dinamica/corte_haste.c}{8}{8}{}
+
+\subsubsection{Dado valor e as moedas existe troco possível?}
+\inserircodigo{c++}{programacao_dinamica/troco_eh_possivel.cpp}{8}{8}{}
+
+\subsubsection{Mínimo de moedas para troco}
+\inserircodigo{c++}{programacao_dinamica/minimo_moedas_troco.cpp}{8}{8}{}
+
+\subsection{Contagem de inversões}
+
+\indent Um dos problemas mais clássicos de programação é a contagem de inversões em uma sequência. De maneira simples, seja S = a1,a2,...,an. Uma inversão em S é um par (i,j), com i<j, tal que ai>aj. Sabendo disso, faça um programa que calcula o número de inversões em uma sequência S.
+
+\inserircodigo{c++}{programacao_dinamica/contagem_inversoes.cpp}{8}{8}{}
+
+\subsection{Maior Subsequência Comum}
+
+\indent Dadas duas sequências s1 e s2, uma de tamanho n e outra de tamanho m, qual a maior subsequência comum às duas? Lembre-se que uma subsequência de s1, por exemplo, é simplesmente um subconjunto dos elementos de s1 na mesma ordem em que apareciam antes. Isto significa que {1, 3, 5} é uma subsequência de {1, 2, 3, 4, 5}, mesmo 1 não estando do lado do 3 na sequência original
+
+\inserircodigo{c++}{programacao_dinamica/maior_subsequencia_comum.cpp}{8}{8}{}
+\inserircodigo{c++}{programacao_dinamica/maior_subsequencia_comum_2.cpp}{8}{8}{}
+
+\subsection{Maior Subsequência crescente}
+Dada uma sequência s qualquer, descobrir o tamanho da maior subsequência crescente de s. Vale lembrar que uma subsequência de s é qualquer subconjunto de elementos de s. Veja, por exemplo:
+s = {3, 4, 3, 5, 2, 7}
+A maior subsequência crescente de s, neste caso é:
+s' = {3, 4, 5, 7}
+e tem tamanho 4.
+
+\inserircodigo{c++}{programacao_dinamica/maior_subsequencia_crescente.cpp}{8}{8}{}
+
+\subsection{Soma máxima em um intervalo}
+\indent Dada uma sequência qualquer S=(s1,s2,s3,...,sn) qual a maior soma que podemos obter escolhendo um subconjunto de termos adjacentes de S? Se a sequência for, por exemplo, (1,-3,5,-2,1,-1), a soma máxima é 4, com os termos (5,-2,1).
+
+\inserircodigo{c++}{programacao_dinamica/soma_maxima_intervalo.cpp}{8}{8}{}
+
+\subsection{Vertex Cover}
+\indent Um reino possui N cidades conectadas entre si por N − 1 rotas bidirecionais, onde se é possível viajar de qualquer cidade a qualquer outra. Preocupada com a segurança das rotas, a rainha decidiu instalar postos de seguranças em algumas cidades. O objetivo é que, para toda rota, exista um posto de segurança em ao menos uma das cidades conectadas por essa rota. Também preocupada com as finanças do reino, a rainha lhe contratou para selecionar achar o número mínimo de cidades em que é preciso construir um posto de segurança de forma a satisfazer as condições necessárias.
+
+\inserircodigo{c++}{programacao_dinamica/vertex_cover.cpp}{8}{8}{}
+
 
 \end{document}
