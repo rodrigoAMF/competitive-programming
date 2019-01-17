@@ -32,6 +32,7 @@
 \inserircodigo{c++}{template.cpp}{8}{8}{}
 
 \newpage
+
 \section{Matemática Computacional}
 
 \subsection{Geometria Básica}
@@ -277,6 +278,11 @@ A fatoração de números primos transforma um número grande em um produto de p
 \subsection{Desligar o bit}
 \inserircodigo{c++}{matematica_computacional/desliga_bit.cpp}{8}{8}{}
 
+\subsection{Módulo de $2^{i}$ usando bitwise}
+Para realizar o módulo de $2^{i}$, ( 2, 4, 8, 16 ...)
+
+\inserircodigo{c++}{matematica_computacional/modulo_2i_bitwise.cpp}{8}{8}{}
+
 \subsection{Divisão de números inteiros com resto negativo}
 
 Caso seja necessário dividir números inteiros com resto um resto que possivelmente negativo
@@ -340,6 +346,17 @@ A comparação entre dois doubles pode retornar valores indejados. Por isso uma 
 \subsection{Somatório de Feynman}
 Para saber quantos quadrados diferentes existem em um quadriculado de N x N quadrados \newline
 \((n*(n+1)*((2*n)+1))/6\)
+
+\subsection{Ponto de máximo e mínimo em uma parábola}
+Se a < 0, ponto de máximo\newline
+Se a > 0, ponto de mínimo
+
+\begin{equation}
+    x = \frac{-b}{2a}
+\end{equation}
+\begin{equation}
+    x = \frac{\Delta}{4a}
+\end{equation}
 
 \subsection{Somatório de um intervalo [a,b] inclusivo}
 
@@ -541,6 +558,12 @@ Para saber quantos quadrados diferentes existem em um quadriculado de N x N quad
 
 \subsection{For em Map}
 \inserircodigo{c++}{estruturas/for_em_map.cpp}{8}{8}{}
+
+\subsection{Union-Find com PD}
+\inserircodigo{c++}{estruturas/union-find-pd.cpp}{8}{8}{}
+
+\subsection{Union-Find com PD que atualiza o tamanho dos conjuntos}
+\inserircodigo{c++}{estruturas/union-find-pd-tamanho-conjunto.cpp}{8}{8}{}
 
 \subsection{Fila de prioridades}
 \inserircodigo{c++}{estruturas/fila_prioridades.cpp}{8}{8}{}
