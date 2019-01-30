@@ -2,7 +2,7 @@
 
 using namespace std;
 
-pai[MAXN], peso[MAXN];
+int pai[MAXN], peso[MAXN];
 
 // funções do Union-Find otimizadas
 int find(int x){
@@ -35,3 +35,7 @@ void join(int x, int y){
         peso[y]++;
     }
 }
+for(int i = 0; i < n; i++){
+    pai[i] = i;
+}
+memset(peso, 1, sizeof peso);

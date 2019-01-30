@@ -1,5 +1,5 @@
 // declaro as variáveis que vou precisar
-pai[MAXN], peso[MAXN], qtd[MAXN];
+int pai[MAXN], peso[MAXN], qtd[MAXN];
 
 // função join otimizada que atualiza o tamanho dos conjuntos
 void join(int x, int y){ // ela recebe os elementos a serem unidos
@@ -42,3 +42,7 @@ void join(int x, int y){ // ela recebe os elementos a serem unidos
         qtd[y]+=qtd[x];
     }
 }
+
+for(int i = 0; i < n; i++){
+        pai[i] = i;
+    }
