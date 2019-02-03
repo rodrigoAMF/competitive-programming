@@ -1,17 +1,13 @@
 #include <bits/stdc++.h>
 
-// Nome de Tipos
-typedef long ll;
-typedef unsigned long long ull;
-typedef long double ld;
-
-// Atalhos
+#define ll long long
+#define ull unsigned long long
+#define ld long double
+#define INF 0x3f3f3f3f
 #define f first
 #define s second
 #define pb push_back
 #define mp make_pair
-#define min(a,b) ((a<b)?a:b)
-#define max(a,b) ((a<b)?b:a)
 #define l length()
 #define forn(i, n) for ( int i = 0; i < (n); ++i )
 #define fornx(i, x, n) for ( int i = (x); i < (n); ++i )
@@ -19,6 +15,7 @@ typedef long double ld;
 using namespace std;
 
 int main() {
-
+	ios::sync_with_stdio(false);cin.tie(NULL);
+	
 	return 0;
 }
