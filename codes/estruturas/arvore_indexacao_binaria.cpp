@@ -1,14 +1,49 @@
-int soma(int x){
+// Consulta O(log n)
+// Atualização O(n)
+// 5 tamanho do vetor (Colocar tamanho máximo)
+int n = 5;
+int v[5];
+int arvore[5+1];
+
+int soma(int posicao){
 	int s = 0;
 	// vamos reduzindo x até acabarmos (quando chegamos a zero)
-	while(x > 0){
-		s += arvore[x]; // adicionamos o pedaço de árvore atual à soma
-		x -= (x & -x); // removemos o bit menos significante
+	while(posicao > 0){
+		s += arvore[posicao]; // adicionamos o pedaço de árvore atual à soma
+		posicao -= (posicao & -posicao); // removemos o bit menos significante
+	}
+	return s;
+}
+void atualiza(int valor, int posicao){ // v[x] = v
+	while(posicao <= n){ // nosso teto, que é quando vamos parar de rodar o algoritmo
+		arvore[posicao] += valor; // adicionamos v frutas a arvore[x], como devemos
+		posicao += (posicao & -posicao); // atualizamos o valor de x adicionado ele ao seu LSB
 	}
 }
-void atualiza(int x, int v){ // adicionar v frutas a caixa x
-	while(x <= N){ // nosso teto, que é quando vamos parar de rodar o algoritmo
-		arvore[x] += v; // adicionamos v frutas a arvore[x], como devemos
-		x += (x & -x); // atualizamos o valor de x adicionado ele ao seu LSB
+
+// Chamar antes de realizar consulta
+void criaArvore(){
+	for(int i = 0; i < n; i++){
+		atualiza(v[i], i+1);
 	}
 }
+
+// [l, r]
+int consulta(int l, int r){
+	// Indices na árvore começam a partir de 1
+	l++, r++;
+	// Para efetuar consulta
+	l -= 1;
+
+	if(l < 0){
+		return soma(r);
+	}else{
+		printf("%d %d\n", l, r);
+		return soma(r) - soma(l);
+	}
+}
+
+/*
+	criaArvore();
+	printf("%d", consulta(0,2));
+*/
