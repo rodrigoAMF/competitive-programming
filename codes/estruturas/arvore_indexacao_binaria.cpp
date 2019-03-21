@@ -1,9 +1,9 @@
 // Consulta O(log n)
 // Atualização O(n)
-// 5 tamanho do vetor (Colocar tamanho máximo)
-int n = 5;
-int v[5];
-int arvore[5+1];
+// n = tamanho do vetor (Colocar tamanho máximo)
+int n = 100000;
+int v[100000];
+int arvore[100000+1];
 
 int soma(int posicao){
 	int s = 0;
@@ -23,6 +23,8 @@ void atualiza(int valor, int posicao){ // v[x] = v
 
 // Chamar antes de realizar consulta
 void criaArvore(){
+	memset(arvore, 0, sizeof arvore);
+
 	for(int i = 0; i < n; i++){
 		atualiza(v[i], i+1);
 	}
@@ -38,7 +40,6 @@ int consulta(int l, int r){
 	if(l < 0){
 		return soma(r);
 	}else{
-		printf("%d %d\n", l, r);
 		return soma(r) - soma(l);
 	}
 }
@@ -46,4 +47,6 @@ int consulta(int l, int r){
 /*
 	criaArvore();
 	printf("%d", consulta(0,2));
+
+	atualiza(-v[pos-1], pos); // Zera o valor do vetor na "pos" e atualiza a árvore
 */
