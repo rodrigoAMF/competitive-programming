@@ -1,3 +1,13 @@
-input.txt
-input.in
-*.exe
+**/input.txt
+**/input.in*
+**/in.txt*
+**/in
+**/out
+**/output.txt
+**/out.out
+**/out.in
+**/output.in
+
+**/*.exe
+
+uri/2788\.cpp
