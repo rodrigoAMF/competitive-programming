@@ -1,1 +1,0 @@
-notas.erase(notas.begin());

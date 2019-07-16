@@ -1,1 +1,0 @@
-cin>>P.first>>P.second

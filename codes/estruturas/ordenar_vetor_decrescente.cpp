@@ -1,1 +1,0 @@
-sort(p.begin(), p.end(), greater<int>());

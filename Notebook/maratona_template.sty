@@ -1,0 +1,110 @@
+% Permite colocar palavras com acentos e configura como lingua padrão o portugues
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+
+% Permite carregar imagens.
+\usepackage{graphicx}
+% Define a fonte.
+\usepackage{bookman}
+\usepackage{wrapfig}
+
+\usepackage{ifthen}
+%\usepackage{siunitx}
+\usepackage{amsthm}
+\usepackage{numprint}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{adjustbox}
+\usepackage{listingsutf8}
+\usepackage{color}
+
+% Para auxiliar na construção de box customizados.
+\usepackage[tikz]{bclogo}
+\usepackage[charter]{mathdesign}
+% Permite criar box coloridos.
+\usepackage{tcolorbox}
+
+\graphicspath{ {./fig/} }
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+ 
+\usetikzlibrary{shapes.geometric,calc}
+\renewcommand{\arraystretch}{1.5}
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+
+\newcommand*\inlinegraphics[2]{%
+  \settototalheight\myheight{Xygp}%
+  \settodepth\mydepth{Xygp}%
+  \raisebox{-\mydepth}{\includegraphics[scale=#2]{#1}}%
+}
+
+\newcommand\score[2]{
+\hspace{-0.3cm}
+\pgfmathsetmacro\pgfxa{#1+1}
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner sep=0.15em,anchor=outer point 3]
+\begin{tikzpicture}[baseline]
+  \foreach \i in {1,...,#2} {
+    \pgfmathparse{(\i<=#1?"black":"white")}
+    \edef\starcolor{\pgfmathresult}
+    \draw (\i*1em,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+   }
+   \pgfmathparse{(#1>int(#1)?int(#1+1):0}
+   \let\partstar=\pgfmathresult
+   \ifnum\partstar>0
+     \pgfmathsetmacro\starpart{#1-(int(#1))}
+     \path [clip] ($(star\partstar.outer point 3)!(star\partstar.outer point 2)!(star\partstar.outer point 4)$) rectangle 
+    ($(star\partstar.outer point 2 |- star\partstar.outer point 1)!\starpart!(star\partstar.outer point 1 -| star\partstar.outer point 5)$);
+     \fill (\partstar*1em,0) node[scorestars,fill=black]  {};
+   \fi
+
+,\end{tikzpicture}
+}
+
+% Permite desenhar um checkmar.
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{lgray}{rgb}{0.960, 0.960, 0.960}
+\definecolor{lblue}{rgb}{0.184, 0.552, 0.654}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{dkblue}{rgb}{0.109, 0.125, 0.592}
+% Define como serão exibidos os códigos no documento.
+\lstset{frame=lines,
+  inputencoding=utf8/latin1,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numbersep=1mm,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2,backgroundcolor=\color{lgray},    
+  columns=fullflexible,
+  breakautoindent=false,
+  framerule=1pt,
+  columns=fixed,
+  xleftmargin=0.5cm
+}
+
+\renewcommand{\lstlistingname}{Algoritmo}
+
+\newcommand{\inserircodigo}[5]{
+  \lstinputlisting[language=#1,
+  linewidth=\textwidth, basicstyle=\fontsize{#3}{#3}\selectfont, caption=#5,
+    numberstyle=\bfseries\fontsize{#4}{#4}\selectfont\color{black}]{codes/#2}
+}

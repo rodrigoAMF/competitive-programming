@@ -1,1 +1,0 @@
-V.resize(10); //Muda o tamanho do vector V para 10.

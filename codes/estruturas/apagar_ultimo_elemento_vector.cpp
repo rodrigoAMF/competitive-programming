@@ -1,1 +1,0 @@
-notas.pop_back();

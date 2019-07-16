@@ -1,1 +1,0 @@
-cout << scientific => 5e+2;

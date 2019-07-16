@@ -1,0 +1,1 @@
+ceil(log10(numero+1))

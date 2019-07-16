@@ -1,0 +1,1 @@
+stoul(string, 0, 10)

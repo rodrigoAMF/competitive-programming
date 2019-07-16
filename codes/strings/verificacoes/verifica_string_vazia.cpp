@@ -1,1 +1,0 @@
-n.empty() // Retona true ou false

@@ -1,1 +1,0 @@
-memset(array, 0, sizeof(array[0][0]) * n * n)

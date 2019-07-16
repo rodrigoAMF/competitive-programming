@@ -1,0 +1,1 @@
+stoi(string, 0, 10)
