@@ -1,7 +1,7 @@
 # Notebook para Competições de Programação
 
 <p align = "center">
-  <img src="https://github.com/rodrigoAMF/competitive-programming-notebook/blob/master/figures/logo_icpc_mdp.png" alt="Logo ICPC e Maratona de Programação" width="500"/>
+  <img src="https://github.com/rodrigoAMF/competitive-programming-notebook/blob/master/Notebook/figures/logo_icpc_mdp.png" alt="Logo ICPC e Maratona de Programação" width="500"/>
 </p>                                                                                                     
 
 
